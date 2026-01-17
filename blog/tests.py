@@ -1,3 +1,10 @@
-from django.test import TestCase
+from django.urls import path
 
-# Create your tests here.
+from .views import (
+    BlogCreateView,
+    BlogDeleteView,
+    BlogDetailView,
+    BlogsView,
+    BlogUpdateView,
+    HomeView,
+)
