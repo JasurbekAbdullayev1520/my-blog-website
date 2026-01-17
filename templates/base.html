@@ -1,101 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <title>My Blog</title>
+    <title>Mening blogim</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: "Segoe UI", Tahoma, sans-serif;
         }
 
         body {
-            background: #f4f6f8;
-            color: #333;
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+            min-height: 100vh;
+            color: #1e293b;
         }
 
+        /* ===== NAVBAR ===== */
         header {
-            background: #1e293b;
-            padding: 15px;
+            background: #0f172a;
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
-        header a {
-            color: white;
-            margin-right: 20px;
-            text-decoration: none;
+        .nav {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #38bdf8;
+            font-size: 22px;
             font-weight: bold;
         }
 
-        header a:hover {
-            text-decoration: underline;
+        .nav-links a {
+            color: #e5e7eb;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: 0.3s;
         }
 
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+        /* ===== CONTENT ===== */
         .container {
             width: 90%;
-            max-width: 1000px;
-            margin: 30px auto;
+            max-width: 1100px;
+            margin: 50px auto;
         }
 
         .card {
             background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 6px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            animation: fadeIn 0.6s ease;
         }
 
-        h1, h2 {
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 34px;
             margin-bottom: 15px;
         }
 
-        input, textarea, select, button {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
+        p {
+            font-size: 18px;
+            color: #475569;
         }
 
-        button {
+        /* ===== BUTTON ===== */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 22px;
             background: #2563eb;
             color: white;
-            border: none;
-            cursor: pointer;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
         }
 
-        button:hover {
+        .btn:hover {
             background: #1d4ed8;
+            transform: translateY(-2px);
         }
 
-        .search-filter {
-            display: flex;
-            gap: 10px;
+        /* ===== BLOG LIST ===== */
+        .blog-card {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            background: #f8fafc;
+            transition: 0.3s;
         }
 
-        .search-filter input,
-        .search-filter select {
-            flex: 1;
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
 
         .blog-title {
             font-size: 22px;
             color: #2563eb;
             text-decoration: none;
+            font-weight: bold;
         }
 
         .blog-title:hover {
             text-decoration: underline;
         }
-    </style>
 
+        /* ===== FORM ===== */
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 8px;
+            border: 1px solid #cbd5f5;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px;
+            width: 100%;
+            background: #16a34a;
+            border: none;
+            color: white;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #15803d;
+        }
+    </style>
 </head>
 <body>
 
 <header>
-    <a href="/">Home</a>
-    <a href="/blogs/">Blogs</a>
-    <a href="/blogs/create/">Create Blog</a>
+    <div class="nav">
+        <div class="logo">📝 Mening blogim</div>
+        <div class="nav-links">
+            <a href="/">Bosh sahifa</a>
+            <a href="/blogs/">Bloglar</a>
+            <a href="/blogs/create/">Blog yaratish</a>
+        </div>
+    </div>
 </header>
 
 <div class="container">
